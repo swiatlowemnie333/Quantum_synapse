@@ -10,7 +10,8 @@ import numpy as np
 from itertools import combinations
 
 # IBM Quantum credentials
-IBM_QUANTUM_API_KEY = "vuMvYtTTYE2DjQFSMfT2sNMlIopT-7ftuOVM-3z3R6Y1"
+IBM_QUANTUM_API_KEY = os.getenv("IBM_QUANTUM_API_KEY")
+
 
 class QuantumSynapse:
     """
