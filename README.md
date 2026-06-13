@@ -13,3 +13,15 @@ Bio-inspired quantum neural network. GHZ-6 95.11% fidelity, 14.10% neural sync o
 ## Author
 Michał Zazuniuk — self-taught quantum engineer
 14 years industrial automation → 1 year quantum
+
+---
+
+## Latest Results (June 2026)
+
+**IBM Quantum Marrakesh:**
+- 6 qubits: **95% fidelity** (7× repeated)
+- 16 qubits: **94.2% fidelity**
+- 32 qubits: **74.1% fidelity**
+
+Method: Parallel wave interference with synesthetic phase correction.
+Full results in `results/ibm_marrakesh_june_2026/`.
