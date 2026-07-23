@@ -1,0 +1,3 @@
+wynik=25.0%
+job=d8rd2e201fac73d46epg
+swapy=0

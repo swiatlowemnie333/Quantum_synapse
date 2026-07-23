@@ -1,0 +1,226 @@
+{
+  "0": {
+    "numer": 0,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9994,
+    "rz_boost": 0.0
+  },
+  "1": {
+    "numer": 1,
+    "kolor": "ZOLTY",
+    "klasa": "SREDNI",
+    "p0": 0.9888,
+    "rz_boost": 0.005
+  },
+  "2": {
+    "numer": 2,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9984,
+    "rz_boost": 0.0
+  },
+  "3": {
+    "numer": 3,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9969,
+    "rz_boost": 0.0
+  },
+  "4": {
+    "numer": 4,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9977,
+    "rz_boost": 0.0
+  },
+  "5": {
+    "numer": 5,
+    "kolor": "ZOLTY",
+    "klasa": "SREDNI",
+    "p0": 0.9858,
+    "rz_boost": 0.005
+  },
+  "6": {
+    "numer": 6,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 1.0,
+    "rz_boost": 0.0
+  },
+  "7": {
+    "numer": 7,
+    "kolor": "ZOLTY",
+    "klasa": "SREDNI",
+    "p0": 0.9862,
+    "rz_boost": 0.005
+  },
+  "8": {
+    "numer": 8,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9978,
+    "rz_boost": 0.0
+  },
+  "9": {
+    "numer": 9,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9983,
+    "rz_boost": 0.0
+  },
+  "10": {
+    "numer": 10,
+    "kolor": "ZOLTY",
+    "klasa": "SREDNI",
+    "p0": 0.9883,
+    "rz_boost": 0.005
+  },
+  "11": {
+    "numer": 11,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9994,
+    "rz_boost": 0.0
+  },
+  "12": {
+    "numer": 12,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.994,
+    "rz_boost": 0.0
+  },
+  "13": {
+    "numer": 13,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.999,
+    "rz_boost": 0.0
+  },
+  "14": {
+    "numer": 14,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9972,
+    "rz_boost": 0.0
+  },
+  "15": {
+    "numer": 15,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9995,
+    "rz_boost": 0.0
+  },
+  "16": {
+    "numer": 16,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9968,
+    "rz_boost": 0.0
+  },
+  "17": {
+    "numer": 17,
+    "kolor": "ZOLTY",
+    "klasa": "SREDNI",
+    "p0": 0.9844,
+    "rz_boost": 0.005
+  },
+  "18": {
+    "numer": 18,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.999,
+    "rz_boost": 0.0
+  },
+  "19": {
+    "numer": 19,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9945,
+    "rz_boost": 0.0
+  },
+  "20": {
+    "numer": 20,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9989,
+    "rz_boost": 0.0
+  },
+  "21": {
+    "numer": 21,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9974,
+    "rz_boost": 0.0
+  },
+  "22": {
+    "numer": 22,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9973,
+    "rz_boost": 0.0
+  },
+  "23": {
+    "numer": 23,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9988,
+    "rz_boost": 0.0
+  },
+  "24": {
+    "numer": 24,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.993,
+    "rz_boost": 0.0
+  },
+  "25": {
+    "numer": 25,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9998,
+    "rz_boost": 0.0
+  },
+  "26": {
+    "numer": 26,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9979,
+    "rz_boost": 0.0
+  },
+  "27": {
+    "numer": 27,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9937,
+    "rz_boost": 0.0
+  },
+  "28": {
+    "numer": 28,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9955,
+    "rz_boost": 0.0
+  },
+  "29": {
+    "numer": 29,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9983,
+    "rz_boost": 0.0
+  },
+  "30": {
+    "numer": 30,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9977,
+    "rz_boost": 0.0
+  },
+  "31": {
+    "numer": 31,
+    "kolor": "ZIELONY",
+    "klasa": "MOCNY",
+    "p0": 0.9971,
+    "rz_boost": 0.0
+  }
+}
