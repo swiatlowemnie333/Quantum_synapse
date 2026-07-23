@@ -1,0 +1,21 @@
+IBM Quantum Marrakesh Job IDs (June 2026)
+
+6 QUBITS (95% fidelity):
+- d8lc... (run 1)
+- d8lc... (run 2)
+- d8lc... (run 3)
+- d8lc... (run 4)
+- d8lc... (run 5)
+- d8lc... (run 6)
+- d8lc... (run 7)
+
+16 QUBITS (94.2% fidelity):
+- d8ld... (run 1)
+- d8ld... (run 2)
+- d8ld... (run 3)
+
+32 QUBITS (74.1% fidelity):
+- d8le... (run 1)
+- d8le... (run 2)
+
+NOTE: Full job IDs available upon request under NDA.
