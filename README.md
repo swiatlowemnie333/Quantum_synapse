@@ -79,3 +79,25 @@ All results reproducible via IBM Quantum job IDs. Date: 2026-07-23.
 - All circuits coupling-map-aware with pinned layouts
 - Analysis scripts in this repo: characterization, clan clustering,
   closed-loop tuning, wave transport, hole dynamics
+
+
+
+## Experiment Log (IBM Quantum job IDs — verifiable on quantum.cloud.ibm.com)
+
+| Date | Job ID | Experiment | Key result |
+|---|---|---|---|
+| 2026-07-23 | d9gr51khonhs73ac42mg | 156q live characterization (T1/T2* delay sweep) | median T1 159µs, T2* 13µs |
+| 2026-07-23 | d9gqsld0k0jc738h8230 | 156q trait measurement (energy/phase/honesty) | clan map, q82 flagged |
+| 2026-07-23 | d9gr86ggk0ls73f22a2g | Bell state + echo, golden pair q0–q1 | GHZ 98.2%, echo 96.9% |
+| 2026-07-23 | d9gs3gshonhs73ac5ikg | Density wave 16q | 98.7% per-position |
+| 2026-07-23 | d9gs7jt0k0jc738ha6fg | Density wave 32q (tuned line) | 97.9% |
+| 2026-07-23 | d9gs8a4honhs73ac5ov0 | Density wave 64q | 97.9% |
+| 2026-07-23 | d9gsac0gk0ls73f23tj0 | Density wave 83q | 97.5% |
+| 2026-07-23 | d9gsccjsbqfc73ep69e0 | Density wave 86q (with bridges) | 97.4% |
+| 2026-07-23 | d9gsd7shonhs73ac5vsg | Full-chip 156q density wave | 97.0%, 136/156 ≥95% |
+| 2026-07-23 | d9grv4ogk0ls73f23dk0 | Hole transport, 13q line | 8 coherent jumps tracked |
+| 2026-07-23 | d9gs1oshonhs73ac5flg | Two-hole dynamics + hole echo | predictions confirmed |
+| 2026-07-23 | d9gsk7khonhs73ac69tg | GHZ-64 theta sweep | 12.4% baseline |
+| 2026-07-23 | d9gt4rogk0ls73f25gog | GHZ-64 min-radius + DD + theta calibration | **27.3%** |
+| 2026-07-23 | d9gsmv50k0jc738hasug | Hybrid density-wave entangled state 64q | 7.3%, branches confirmed |
+| 2026-07-23 | d9grhbggk0ls73f22pig | GHZ-32 wave | 32.7% populations |
