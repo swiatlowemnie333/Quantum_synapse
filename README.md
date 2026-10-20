@@ -12,15 +12,20 @@ IBM Quantum.
 
 ### Experimental Benchmarks on IBM Marrakesh (Eagle r3, 156 Qubits)
 
-| Qubits  |        Job ID          | Physical Qubits (Layout)                    | Raw Population $P(0)+P(1)$ | Readout Factor | Mitigated Population | Shots |
-| **27q** | `da63t6s3jnrc73ai07e0` | 80, 96, 100–102, 116, 120–122, 136, 139–155 | **29.66%**                 | 0.4961         | **59.79%**           | 8,192 |
-| **24q** | `da63jbuaa69c739lhp8g` | 101–102, 116, 120–122, 136, 139–155         | **40.82%**                 | 0.5151         | **79.25%**           | 4,096 |
-| **20q** | `da632s3otlns739cijk0` | 120–121, 136, 139–155                       | **57.68%**                 | 0.5959         | **96.79%**           | 8,192 |
-| **20q** | `da61cfeaa69c739lepj0` | 120–121, 136, 139–155                       | **52.99%**                 | 0.5959         | **88.92%**           | 8,192 |
-| **16q** | `da5lidmaa69c739l0tp0` | 139, 141–155                                | **64.69%**                 | 0.7446         | **86.87%**           | 8,192 |
-| **16q** | `da5kofbotlns739c1rh0` | 139, 141–155                                | **64.40%**                 | 0.7446         | **86.50%**           | 8,192 |
-| **16q** | `da5kb9jotlns739c1d10` | 0–8, 16, 18, 20, 21, 23, 24, 28             | **39.15%**                 | 0.6252         | **62.62%**           | 8,192 |
+## 🔬 Empirical Quantum Circuit Benchmarks (IBM Marrakesh – 156 Qubits)
 
+| Qubits | Job ID | Physical Qubits (Layout) | Raw Population P(0)+P(1) | Readout Factor | Mitigated Population | Shots |
+| :---: | :--- | :--- | :---: | :---: | :---: | :---: |
+| **27q** | `da63t6s3jnrc73ai07e0` | 80, 96, 100–102, 116, 120–122, 136, 139–155 | **29.66%** | 0.4961 | **59.79%** | 8,192 |
+| **24q** | `da63jbuaa69c739lhp8g` | 101–102, 116, 120–122, 136, 139–155 | **40.82%** | 0.5151 | **79.25%** | 4,096 |
+| **20q** | `da632s3otlns739cijk0` | 120–121, 136, 139–155 | **57.68%** | 0.5959 | **96.79%** | 8,192 |
+| **20q** | `da61cfeaa69c739lepj0` | 120–121, 136, 139–155 | **52.99%** | 0.5959 | **88.92%** | 8,192 |
+| **16q** | `da5lidmaa69c739l0tp0` | 139, 141–155 | **64.69%** | 0.7446 | **86.87%** | 8,192 |
+| **16q** | `da5kofbotlns739c1rh0` | 139, 141–155 | **64.40%** | 0.7446 | **86.50%** | 8,192 |
+| **16q** | `da5kb9jotlns739c1d10` | 0–8, 16, 18, 20, 21, 23, 24, 28 | **39.15%** | 0.6252 | **62.62%** | 8,192 |
+
+> **Methodology & Terminology Note:**  
+> The values above reflect the **GHZ state population** ($P(\vert{}0^{\otimes N}\rangle) + P(\vert{}1^{\otimes N}\rangle)$). While state population establishes the strict upper bound for quantum state fidelity ($F = \frac{\text{Population} + \text{Coherence}}{2}$), full state fidelity requires off-diagonal density matrix coherence verification (via parity oscillation analysis or multiple quantum coherences). Readout mitigation was calculated using independent per-qubit assignment fidelity product scaling derived directly from calibrated backend properties. Configurations yielding non-physical mitigation divergences (>100%) due to low-fidelity hardware regions have been excluded to preserve empirical integrity.
 Methodology & Terminology Note:
 The values above reflect the GHZ state population ($P(\vert{}0^{\otimes N}\rangle) + P(\vert{}1^{\otimes N}\rangle)$). While state population establishes the strict upper bound for quantum state fidelity ($F = \frac{\text{Population} + \text{Coherence}}{2}$), full state fidelity requires off-diagonal density matrix coherence verification (via parity oscillation analysis or multiple quantum coherences). Readout mitigation was calculated using independent per-qubit assignment fidelity product scaling derived directly from calibrated backend properties. Configurations yielding non-physical mitigation divergences ($>100\%$) due to low-fidelity hardware regions have been excluded to preserve empirical integrity.
 
