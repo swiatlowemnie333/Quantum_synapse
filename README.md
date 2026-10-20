@@ -10,21 +10,19 @@ IBM Quantum.
 
 ## 🔬 Empirical Quantum Circuit Benchmarks (IBM Marrakesh - 156 Qubits)
 
-Comprehensive multi-qubit Greenberger–Horne–Zeilinger (GHZ) state entanglement and readout error mitigation benchmarks executed natively via Qiskit Runtime Primitives.
+### Experimental Benchmarks on IBM Marrakesh (Eagle r3, 156 Qubits)
 
-| State Size | Job ID | Raw State Fidelity ($F_{\text{raw}}$) | Mitigated Fidelity ($F_{\text{mit}}$) | Shots | Execution Date |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| **27 Qubits** | `da63t6s3jnrc73ai07e0` | **29.66%** | **59.79%** | 8,192 | 2026-08-24 |
-| **24 Qubits** | `da63jbuaa69c739lhp8g` | **40.82%** | **79.25%** | 4,096 | 2026-08-24 |
-| **20 Qubits** | `da632s3otlns739cijk0` | **57.68%** | **96.79%** | 8,192 | 2026-08-24 |
-| **20 Qubits** | `da61cfeaa69c739lepj0` | **52.99%** | **88.92%** | 8,192 | 2026-08-24 |
-| **16 Qubits** | `da5lidmaa69c739l0tp0` | **64.69%** | **86.87%** | 8,192 | 2026-08-23 |
-| **16 Qubits** | `da5kofbotlns739c1rh0` | **64.40%** | **86.50%** | 8,192 | 2026-08-23 |
-| **16 Qubits** | `da5l8mm1vhnc73fm7eng` | **57.48%** | **100.00%*** | 8,192 | 2026-08-23 |
-| **16 Qubits** | `da5kvoeaa69c739l07kg` | **54.13%** | **100.00%*** | 8,192 | 2026-08-23 |
-| **16 Qubits** | `da5kb9jotlns739c1d10` | **39.15%** | **62.62%** | 8,192 | 2026-08-23 |
+| Qubits  |        Job ID          | Physical Qubits (Layout)                    | Raw Population $P(0)+P(1)$ | Readout Factor | Mitigated Population | Shots |
+| **27q** | `da63t6s3jnrc73ai07e0` | 80, 96, 100–102, 116, 120–122, 136, 139–155 | **29.66%**                 | 0.4961         | **59.79%**           | 8,192 |
+| **24q** | `da63jbuaa69c739lhp8g` | 101–102, 116, 120–122, 136, 139–155         | **40.82%**                 | 0.5151         | **79.25%**           | 4,096 |
+| **20q** | `da632s3otlns739cijk0` | 120–121, 136, 139–155                       | **57.68%**                 | 0.5959         | **96.79%**           | 8,192 |
+| **20q** | `da61cfeaa69c739lepj0` | 120–121, 136, 139–155                       | **52.99%**                 | 0.5959         | **88.92%**           | 8,192 |
+| **16q** | `da5lidmaa69c739l0tp0` | 139, 141–155                                | **64.69%**                 | 0.7446         | **86.87%**           | 8,192 |
+| **16q** | `da5kofbotlns739c1rh0` | 139, 141–155                                | **64.40%**                 | 0.7446         | **86.50%**           | 8,192 |
+| **16q** | `da5kb9jotlns739c1d10` | 0–8, 16, 18, 20, 21, 23, 24, 28             | **39.15%**                 | 0.6252         | **62.62%**           | 8,192 |
 
-*\*Values capped at 100.00% via single-qubit independent readout tensor mitigation model.*
+Methodology & Terminology Note:
+The values above reflect the GHZ state population ($P(\vert{}0^{\otimes N}\rangle) + P(\vert{}1^{\otimes N}\rangle)$). While state population establishes the strict upper bound for quantum state fidelity ($F = \frac{\text{Population} + \text{Coherence}}{2}$), full state fidelity requires off-diagonal density matrix coherence verification (via parity oscillation analysis or multiple quantum coherences). Readout mitigation was calculated using independent per-qubit assignment fidelity product scaling derived directly from calibrated backend properties. Configurations yielding non-physical mitigation divergences ($>100\%$) due to low-fidelity hardware regions have been excluded to preserve empirical integrity.
 
 ### 🛠️ Hardware Constraints & Topology Mapping
 * **Target Processor:** `ibm_marrakesh` (Heavy-hex architecture, 156 active physical qubits).
