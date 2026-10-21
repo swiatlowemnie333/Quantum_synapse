@@ -33,7 +33,7 @@ Human physicist-engineer (concepts) + AI agent (code/analysis). All experiments 
 
 ## 📐 The Method: Minimum-Resistance Prim-Tree Routing
 Edge weight:
-$$w = -\ln(1 - \text{cx\_err}) + \text{duration} \cdot \left(\frac{1}{T_{2a}} + \frac{1}{T_{2b}}\right)$$
+$$w = -\ln(1 - \text{cx}_{\text{err}}) + \text{duration} \cdot \left(\frac{1}{T_{2a}} + \frac{1}{T_{2b}}\right)$$
 
 Prim tree grown from a degree-3 hub over the heavy-hex coupling map minus our live-measured DEAD set (18 dead + 12 weak qubits, job `da5g34jotlns739bst90`).
 
