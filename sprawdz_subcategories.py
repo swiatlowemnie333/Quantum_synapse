@@ -1,10 +1,11 @@
+import os
 from openquantum_sdk.auth import ClientCredentials, ClientCredentialsAuth
 from openquantum_sdk.clients import SchedulerClient
 
 auth = ClientCredentialsAuth(
     creds=ClientCredentials(
-        client_id="s_a6106557ee774c9c9365d47088e2edcf",
-        client_secret="7204151edeff758d9d7e118e68adafe6bbbe2395ff242336d9177b57b978aefb"
+        client_id=os.getenv("OPENQUANTUM_CLIENT_ID"),
+        client_secret=os.getenv("OPENQUANTUM_CLIENT_SECRET")
     )
 )
 scheduler = SchedulerClient(auth=auth)
