@@ -27,7 +27,7 @@ Human physicist-engineer (concepts) + AI agent (code/analysis). All experiments 
 - **Fault-Tolerant Routing:** Excluded dead/degraded physical qubits (Q82, Q94, Q113, Q130) during coupling map routing.
 - **Error Mitigation:** Measurement error mitigation computed dynamically using tensor-product readout probabilities from backend snapshot properties.
 
-**Reference points:** IBM's published 27-qubit result is $F = 0.546$ (2021, with error mitigation); Kang et al. 32q $F = 0.519$ (mitigated). Our raw 16-qubit fidelity ($0.603$) exceeds IBM's published mitigated results; with our offline readout mitigation we reach $0.815$.
+**Reference points:** IBM's published 27-qubit result is $F = 0.546$ (2021, with error mitigation); Kang et al. 32q $F = 0.519$ (mitigated). These are **true state fidelities** (population + coherence). The table above reports **population only** — see the corrected direct-measurement section below before comparing. We do **not** claim to beat these benchmarks on true fidelity.
 
 ---
 
@@ -35,13 +35,13 @@ Human physicist-engineer (concepts) + AI agent (code/analysis). All experiments 
 Edge weight:
 $$w = -\ln(1 - \text{cx\_err}) + \text{duration} \cdot \left(\frac{1}{T_{2a}} + \frac{1}{T_{2b}}\right)$$
 
-Prim tree grown from a degree-3 hub over the heavy-hex coupling map minus our live-measured DEAD set (18 dead + 12 weak qubits, job `da5g34jotlns739bst90`).
+Prim tree grown from a degree-3 hub over the heavy-hex coupling map minus our DEAD set. Triple-method validation (readout + bitstring + T1/T2) confirms **4 dead qubits (q82, q94, q113, q130)** and **14 weak** by direct readout; a broader bitstring-only screen flags up to ~18 suspect positions (job `da5g34jotlns739bst90`).
 
 **GHZ witness:** $F = \frac{P + C}{2}$; $F > 50\%$ certifies genuine multipartite entanglement.
 
-### Geometry experiment @ 16 qubits (same day, same calibration)
+### Geometry experiment @ 16 qubits (same day, same calibration) — population P(0)+P(1), not fidelity
 
-| Topology | Fidelity ($F$) | Job ID |
+| Topology | Population P(0)+P(1) | Job ID |
 | :--- | :---: | :--- |
 | **Linear chain** | 34.0% | `da5kb9jotlns739c1d10` |
 | **Shallow BFS tree (depth 18)** | 50.1% | `da5kvoeaa69c739l07kg` |
@@ -58,9 +58,9 @@ Prim tree grown from a degree-3 hub over the heavy-hex coupling map minus our li
 | IBM SamplerV2 (gate + measure twirling) | 25.8% |
 | Naive + twirling | 0.1% |
 
-### Coherence cliff (raw $F$ vs $N$)
+### Coherence cliff — population P(0)+P(1) vs $N$ (NOT fidelity)
 $N=12 \rightarrow 63.5\% \cdot 16 \rightarrow 60.3\% \cdot 20 \rightarrow 52.3\% \cdot 24 \rightarrow 35.1\% \cdot 32 \rightarrow 20.5\% \cdot 48 \rightarrow 3.3\% \cdot 64 \rightarrow 0.3\% \cdot 80 \rightarrow 0.3\%$ (jobs `da5lidmaa69c739l0tp0`, `da63jbuaa69c739lhp8g`).  
-*Genuine multipartite entanglement witness holds up to 20 qubits.*
+These are **population**, not fidelity. For the directly measured **true MQC fidelity** — which shows the genuine-entanglement witness holding only to ≈16 qubits — see the section below.
 
 ---
 
@@ -71,6 +71,23 @@ $N=12 \rightarrow 63.5\% \cdot 16 \rightarrow 60.3\% \cdot 20 \rightarrow 52.3\%
 - **Closed-loop recalibration:** +27% gain (32.7% $\rightarrow$ 41.6%, `da5gt0jotlns739btnhg`).
 
 ---
+
+## ✅ Direct MQC fidelity measurement (2026-11-13) — corrected, honest numbers
+
+Earlier "fidelity" figures in this repo were in fact **GHZ population** $P(0^N)+P(1^N)$, not true state fidelity. On 2026-11-13 we measured **true fidelity directly** via the parity-oscillation / multiple-quantum-coherence (MQC) method on `ibm_marrakesh`: prepare GHZ-N, apply a collective phase scan $R(\pi/2,\varphi)$, extract coherence $C$ from the $\cos(N\varphi)$ amplitude, and report $F = (P + C)/2$.
+
+| GHZ N | True fidelity $F$ (raw) | Witness $F>0.5$ | Job IDs |
+| :---: | :---: | :---: | :--- |
+| 6  | **86.7%** | ✅ genuine GHZ | `dbrfqdmj…` |
+| 16 | **33–51%** (drifts) | ✅ in better runs | `dbrfqogk…`, `dbrga30k…`, `dbri406j…` |
+| 20 | **16–44%** (drifts) | ❌ mostly below | `dbrfrgfv…`, `dbrh4tm…`, `dbri7fv…` |
+| 27 | **17.4%** | ❌ | `dbriannv…` |
+
+**Honest conclusions (reproducible, no inflated numbers):**
+- **Genuine multipartite entanglement is certified to ≈16 qubits** (witness $F>0.5$ in good runs); GHZ-20/27 fall below the witness raw. The coherence cliff sits around N=16–20.
+- **Readout mitigation (M3/tensored) raises population but not coherence** — in every run the coherence term barely moved (e.g. 16q $C: 0.19\to0.19$) while population over-inflated. So readout mitigation does **not** reliably raise *true* fidelity at scale; the dominant residual errors are gates/decoherence, not readout. Mitigated "fidelity" figures are therefore **not** a fair comparison to IBM's mitigated 54.6% and are not claimed here.
+- **Strong temporal/calibration drift:** the same GHZ-16 circuit gave raw $F$ between 33% and 51% within a single day — motivating regular, reproducible benchmarking rather than single "hero" numbers.
+- Reproduce with `fidelity_mqc.py` (raw) and `fidelity_qrem.py` (with M3 mitigation) using the job IDs above.
 
 ## 📊 Full Report & Interactive Data
 - **Interactive report with 6-figure results gallery:** [Zerve AI Report](https://app.zerve.ai/report/0db23d24-a306-4004-8fb3-2a308cf80884)
